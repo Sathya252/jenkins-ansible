@@ -7,7 +7,8 @@
       ansible.builtin.package:
         name: apache2
         state: present
+
     - name: copy html
       ansible.builtin.copy:
-        src: index.html
-        dest: /var/www/html/
+        src: addressbook/index.html   # include folder name
+        dest: /var/www/html/index.html
